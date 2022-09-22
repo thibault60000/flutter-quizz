@@ -134,7 +134,7 @@ class _PageQuizzState extends State<PageQuizz> {
               fit: BoxFit.contain),
           Container(height: 25.0),
           CustomText(
-              text: "Votre score est de $score / $index",
+              text: "Votre score est de $score / $index+1",
               size: 1.5,
               color: Colors.black,
               textAlign: TextAlign.center),
@@ -153,14 +153,14 @@ class _PageQuizzState extends State<PageQuizz> {
     );
   }
 
-  void nextquestion() {
+  void nextquestion() async {
     if (index < questionsList.length - 1) {
       setState(() {
         index++;
         question = questionsList[index];
       });
     } else {
-      alert();
+      await alert();
       setState(() {
         index = 0;
         score = 0;
