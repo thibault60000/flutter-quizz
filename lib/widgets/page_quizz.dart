@@ -134,7 +134,7 @@ class _PageQuizzState extends State<PageQuizz> {
               fit: BoxFit.contain),
           Container(height: 25.0),
           CustomText(
-              text: "Votre score est de $score / $index+1",
+              text: "Votre score est de $score / ${index + 1}",
               size: 1.5,
               color: Colors.black,
               textAlign: TextAlign.center),
